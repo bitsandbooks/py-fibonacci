@@ -1,29 +1,26 @@
 #!/usr/bin/python
 """
-As our program gets more complex, it makes sense to take certain parts and turn 
-them into FUNCTIONS. Functions are like miniature programs inside your program. 
-The program can CALL (i.e., start, invoke) a function, at which point it will 
-do something and then RETURN (i.e., exit) to the main program. Your program can 
-also pass PARAMETERS (data, variables, values, etc.) to the function if it will 
-need to know more in order to complete its task.
+Python comes with a vast collection of built-in functions that are designed to 
+make things easier for you. For example, len() will tell you how long something 
+is. Let's use len() to make fib() simpler.
 """
 
 # Define a function (fib) which takes one parameter (t).
 def fib(t):
-  f0, f1 = 0, 1
-  f = [ ]
-  f.append(f0)
-  f.append(f1)
+  f = [ 0, 1 ] # Create a list with our seed values already on it.
 
-  for i in range(2,t): # t represents the end of our range.
-    fn = f1 + f0
+  # len(f) will find out how many items are on our list (f) and return the 
+  # answer (in this case, 2). We can use the len() function to determine the 
+  # start of our range automatically. This means that if you were to add 
+  # another number to f at the start (such as 1, which is the next number in 
+  # the Fibonacci sequence), the function would still work. 
+  for i in range(len(f),t): 
+    fn = f[len(f)-1] + f[len(f)-2]
     f.append(fn)
-    f0 = f1
-    f1 = fn
   
   print f
 
-fib(12) # Call function fib and pass 12 as its parameter (so t = 12).
+fib(12)
 
 """
 Result: 
