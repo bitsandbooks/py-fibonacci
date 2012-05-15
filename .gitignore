@@ -1,0 +1,55 @@
+# Numerous always-ignore extensions
+temp/*
+.temp
+*.temp
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS and/or Editor files/folders 
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Xcode user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+xcuserdata/
+
+# Generated files
+VersionX-revision.h
+
+# Build products
+build/
+*.[oa]
+
+# Other source repository archive directories (protects when importing)
+CVS
+.CVS
+.hg
+.idea
+.svn
