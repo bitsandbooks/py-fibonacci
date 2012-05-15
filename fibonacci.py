@@ -1,25 +1,29 @@
 #!/usr/bin/python
 """
-Our previous example prints each value out on a separate line, but it'll be a 
-lot easier to read if we just print them all out at the end, as one big list. 
-Assigning a variable with square brackets around its value(s) creates a LIST. 
-You can also create an empty list by putting nothing between the brackets.
+As our program gets more complex, it makes sense to take certain parts and turn 
+them into FUNCTIONS. Functions are like miniature programs inside your program. 
+The program can CALL (i.e., start, invoke) a function, at which point it will 
+do something and then RETURN (i.e., exit) to the main program. Your program can 
+also pass PARAMETERS (data, variables, values, etc.) to the function if it will 
+need to know more in order to complete its task.
 """
 
-f0, f1 = 0, 1 
+# Define a function (fib) which takes one parameter (t).
+def fib(t):
+  f0, f1 = 0, 1
+  f = [ ]
+  f.append(f0)
+  f.append(f1)
 
-f = [ ] # Create an empty list.
-f.append(f0) # Put our seed values on the list at the end.
-f.append(f1)
+  for i in range(2,t): # t represents the end of our range.
+    fn = f1 + f0
+    f.append(fn)
+    f0 = f1
+    f1 = fn
+  
+  print f
 
-for i in range(2,12): 
-  fn = f1 + f0
-  f.append(fn)
-  f0 = f1
-  f1 = fn
-
-# Print out the entire list.
-print f
+fib(12) # Call function fib and pass 12 as its parameter (so t = 12).
 
 """
 Result: 
