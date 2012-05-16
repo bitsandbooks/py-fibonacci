@@ -1,29 +1,36 @@
 #!/usr/bin/python
 """
-Python comes with a vast collection of built-in functions that are designed to 
-make things easier for you. For example, len() will tell you how long something 
-is. Let's use len() to make fib() simpler.
+If someone using our program wants to get 13 numbers in the Fibonacci sequence 
+(or 10 or 100 or any other number), they have to edit our program by hand. 
+That's a hassle, so Python has LIBRARIES (collections of tools) that allow you 
+to pass arguments to the program at RUNTIME (when you run the program).
 """
+import sys # This library provides system-specific functions.
+
+times = int(  # Force the parameter to be an integer.
+  sys.argv[1] # The first argument after the program name.
+)
 
 # Define a function (fib) which takes one parameter (t).
 def fib(t):
-  f = [ 0, 1 ] # Create a list with our seed values already on it.
+  f = [ 0, 1 ]
 
-  # len(f) will find out how many items are on our list (f) and return the 
-  # answer (in this case, 2). We can use the len() function to determine the 
-  # start of our range automatically. This means that if you were to add 
-  # another number to f at the start (such as 1, which is the next number in 
-  # the Fibonacci sequence), the function would still work. 
   for i in range(len(f),t): 
     fn = f[len(f)-1] + f[len(f)-2]
     f.append(fn)
   
   print f
 
-fib(12)
+fib(times) # Call function fib and pass the value of times as its parameter.
 
 """
 Result: 
-$ ~: fibonacci.py
+$ ~: fibonacci.py 12
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+$ ~: fibonacci.py 15
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
+
+NOTE: If you use anything other than a number as an argument, the program will 
+crash when you try to run it. Can you find a way to make sure the argument is 
+a number?
 """
