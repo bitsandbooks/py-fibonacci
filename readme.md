@@ -6,7 +6,7 @@ This repository is an educational tool. It has been written to introduce the rea
 
 ## Using this Repository
 
-Start from the introductory commit ( bitsandbooks/py-fibonacci@f938ae1e92cbbcc81746187cad161f913c66a885 ) and read the comments at the top of *fibonacci.py* to progress.
+Start from the [introductory commit](https://github.com/bitsandbooks/py-fibonacci/commit/f938ae1e92cbbcc81746187cad161f913c66a885) and read the comments at the top of *fibonacci.py* to progress.
 
 ## Additional Notes
 
